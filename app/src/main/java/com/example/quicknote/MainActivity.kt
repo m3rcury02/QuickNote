@@ -59,7 +59,7 @@ fun Notes(modifier: Modifier) {
             .padding(16.dp)
     ) {
         LazyColumn(modifier = Modifier.weight(1f), reverseLayout = true) {
-            items(notesList) { currentNote ->
+            items(notesList.asReversed()) { currentNote ->
                 Text(
                     text = currentNote, modifier = Modifier
                         .fillMaxWidth()
